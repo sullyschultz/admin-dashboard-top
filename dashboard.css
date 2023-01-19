@@ -2,14 +2,24 @@
     margin: 0;
     padding: 0;
 }
+html { 
+    background: url(images/main-content.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .container {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 4fr;
+    height: 100vh;
 }
 .header {
-    background-color: white;
+    background-color: white, 0;
     color: black;
-    grid-column: 2 / 3;
+    grid-column: 1 / 3;
     display: grid;
     grid-template-columns: auto auto; 
     align-items: center;
@@ -23,16 +33,22 @@
     margin: 5px;
 }
 .nav {
-    background-color: rgb(95, 95, 250);
+    background-color: rgb(255, 255, 255, 0);
     grid-column: 1 / 2;
     display: grid;
-
+    gap: 15px;
+    justify-items:left;
+    padding: 5px;
+}
+.nav li {
+    padding: 3px;
+    list-style-type: none;
 }
 .main-content {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    background-color: rgb(165, 163, 163);
+    background-color: rgb(255, 255, 255, 0);
 }
 .content-cards {
     display: grid;
@@ -43,7 +59,7 @@
 }
 .content-cards .card {
     height: 150px;
-    background: beige;
+    background: rgb(245, 245, 220, 0.6);
     border-radius: 5px;
     text-align: center;
     padding:15px;
@@ -51,22 +67,29 @@
 .content-sidebar {
     display: grid;
     margin: 15px;
-    padding:10px;
-
+    align-content: space-around;
 }
-.announcements {
-    
+
+.content-sidebar h4 {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.content-header {
+    grid-column: 1 / 3;
+    padding-left: 15px; padding-top: 10px;
+    font-size: 1.25rem;
 }
 .trending div {
     text-align: center;
-    background-color: beige;
+    background-color: beige, 0;
     padding: 10px;
     height: 30px;
     
 }
 .announcements div {
     text-align: center;
-    background-color: beige;
+    background-color: beige, 0;
     padding: 10px;
     height: 50px;
     
@@ -76,6 +99,12 @@
 }
 .footer {
     grid-column: 1 / 3;
-    background-color: teal;
-    text-align: center;
+    background-color: rgb(15, 114, 114, 0);
+    text-align: right;
+    padding-top: 10px;   
+}
+
+/* Icons */ 
+.fa-solid {
+    font-size: 1rem;
 }
