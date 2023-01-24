@@ -37,7 +37,7 @@ html {
     transform: rotate(30deg);
     grid-column: 2 / 3;
     margin: 5px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 .nav {
     
@@ -56,7 +56,6 @@ html {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    background-color: rgb(255, 255, 255, 0);
 }
 .content-cards {
     display: grid;
@@ -65,22 +64,31 @@ html {
     gap: 15px;
     
 }
+.content-cards img {
+   height: 100%;
+   width: 100%;
+   border-radius: 10px;
+}
 .content-cards .card {
     height: 150px;
     background: rgb(245, 245, 220, 0.6);
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    padding:15px;
+    justify-content: center;
+    
 }
 .content-sidebar {
     display: grid;
-    margin: 15px;
     align-content: space-around;
+    padding: 5px;
+    background: rgb(245, 245, 220, 0.6);
 }
 
 .content-sidebar h4 {
     text-align: center;
     font-size: 1.25rem;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
 }
 
 .content-header {
@@ -88,19 +96,22 @@ html {
     padding-left: 15px; padding-top: 10px;
     font-size: 1.25rem;
 }
+.trending,
+.articles {
+    height: 150px;
+}
 .trending div {
     text-align: center;
-    background-color: beige, 0;
-    padding: 10px;
-    height: 30px;
-    
+    font-weight: 800;
+    font-size: 18px;  
+    padding: 5px;
 }
+
 .articles div {
     text-align: center;
-    padding: 10px;
-    height: 50px;
     font-weight: 800;
     font-size: 18px;
+    padding: 5px;
 }
 
 a {
@@ -122,10 +133,17 @@ input {
 li:hover {
     transform: scale(110%);
 }
+button:hover,
+button:focus {
+    background-color: rgb(116, 116, 238);
+    color:black;
+}
+.card:hover {
+    transform: scale(90%);
+}
 .articles a:hover,
-.trending a:hover {
-    font-size: 150%;
-    
+.trending a:hover { 
+    font-size: 125%; 
 }
 /* Icons */ 
 .fa-solid {
